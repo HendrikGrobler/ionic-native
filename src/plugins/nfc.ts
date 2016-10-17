@@ -32,7 +32,7 @@ export class NFC {
    * Registers an event listener for any NDEF tag.
    * @param onSuccess
    * @param onFailure
-   * @return {Promise<any>}
+   * @return {Observable<any>}
    */
   @Cordova({
     observable: true,
@@ -48,7 +48,7 @@ export class NFC {
    * @param mimeType
    * @param onSuccess
    * @param onFailure
-   * @return {Promise<any>}
+   * @return {Observable<any>}
    */
   @Cordova({
     observable: true,
@@ -63,7 +63,7 @@ export class NFC {
    * Registers an event listener for NDEF tags matching a specified MIME type.
    * @param onSuccess
    * @param onFailure
-   * @return {Promise<any>}
+   * @return {Observable<any>}
    */
   @Cordova({
     observable: true,
@@ -78,7 +78,7 @@ export class NFC {
    * Registers an event listener for formatable NDEF tags.
    * @param onSuccess
    * @param onFailure
-   * @return {Promise<any>}
+   * @return {Observable<any>}
    */
   @Cordova({
     observable: true,
@@ -152,12 +152,11 @@ export class NFC {
   static enabled(): Promise<any> {return; }
 
 }
-/**
- * @private
- */
+
 export declare class Ndef {
   static uriRecord(uri: string): any;
   static textRecord(text: string): any;
   static mimeMediaRecord(mimeType: string, payload: string): any;
   static androidApplicationRecord(packageName: string): any;
+  static decodeMessage(bytes: any): any;
 }
