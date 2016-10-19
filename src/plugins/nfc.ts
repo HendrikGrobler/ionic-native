@@ -153,10 +153,38 @@ export class NFC {
 
 }
 
-export declare class Ndef {
-  static uriRecord(uri: string): any;
-  static textRecord(text: string): any;
-  static mimeMediaRecord(mimeType: string, payload: string): any;
-  static androidApplicationRecord(packageName: string): any;
-  static decodeMessage(bytes: any): any;
+export class Ndef {
+   private plugin: string = 'phonegap-nfc';
+   private pluginRef: string = 'nfc';
+
+  constructor() {
+    // Needed to prevent lint tool from failing because of unused properties
+    this.plugin;
+    this.pluginRef;
+  }
+
+  @Cordova({
+    sync: true
+  })
+  static uriRecord(uri: string): any {return; }
+
+  @Cordova({
+    sync: true
+  })
+  static textRecord(text: string): any {return; }
+
+  @Cordova({
+    sync: true
+  })
+  static mimeMediaRecord(mimeType: string, payload: string): any {return; }
+
+  @Cordova({
+    sync: true
+  })
+  static androidApplicationRecord(packageName: string): any {return; }
+
+  @Cordova({
+    sync: true
+  })
+  static decodeMessage(bytes: any): any {return; }
 }

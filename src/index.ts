@@ -76,7 +76,7 @@ import { MediaPlugin } from './plugins/media';
 import { Mixpanel } from './plugins/mixpanel';
 import { MusicControls } from './plugins/music-controls';
 import { Network } from './plugins/network';
-import { NFC } from './plugins/nfc';
+import { NFC, Ndef } from './plugins/nfc';
 import { OneSignal } from './plugins/onesignal';
 import { PhotoViewer } from './plugins/photo-viewer';
 import { ScreenOrientation } from './plugins/screen-orientation';
@@ -293,6 +293,7 @@ window['IonicNative'] = {
   NativePageTransitions,
   NativeStorage,
   Network,
+  Ndef,
   PayPal,
   NFC,
   Printer,
